@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 import { Search, Plus, Edit, Trash2, ChevronLeft, ChevronRight, X } from "lucide-react";
+import dotenv from "dotenv";
 
-const API_URL = "http://localhost:3000/api/jets";
+dotenv.config();
+
+const API_URL = process.env.BACKEND_URL + "/api/jets";
 
 export default function FighterJetDashboard() {
   const [jets, setJets] = useState([]);
